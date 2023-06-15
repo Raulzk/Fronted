@@ -1,0 +1,64 @@
+<app-toolbar></app-toolbar>
+<!-- listar-trabajador.component.html 
+<ng-container *ngFor="let trabajador of trabajadores">
+    <mat-card class="small-card">
+        <mat-card-header>
+            <mat-card-title>{{ trabajador.nombreCompleto }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>Teléfono: {{ trabajador.telefono }}</p>
+            <p>Correo: {{ trabajador.correo }}</p>
+            <p>Sexo: {{ trabajador.sexo }}</p>
+            <p>DNI: {{ trabajador.dni }}</p>
+            <p>Dirección: {{ trabajador.direccion }}</p>
+            <p>Servicio: {{ trabajador.servicio }}</p>
+            <p>Fecha de Nacimiento: {{ trabajador.fechaNacimiento }}</p>
+            <p>Fecha de Ingreso: {{ trabajador.fechaIngreso }}</p>
+        </mat-card-content>
+    </mat-card>
+</ng-container>
+-->
+<br>
+<br>
+<mat-form-field class="full-width">
+    <mat-label>Ingrese Dirección</mat-label>
+    <input matInput [(ngModel)]="terminoBusqueda" (keyup)="Filter()" placeholder="Ubicacion" autocomplete="off">
+</mat-form-field>
+<div class="row">
+    <div class="col" *ngFor="let trabajador of trabajadores">
+        <mat-card class="small-card">
+            <mat-card-header>
+                <img src="assets/images/pintor.jpg" alt="">
+            </mat-card-header>
+            <mat-card-header>
+                <mat-card-title>{{ trabajador.nombreCompleto }}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>Teléfono: {{ trabajador.telefono }}</p>
+                <p>Correo: {{ trabajador.correo }}</p>
+                <p>Sexo: {{ trabajador.sexo }}</p>
+                <p>DNI: {{ trabajador.dni }}</p>
+                <p>Dirección: {{ trabajador.direccion }}</p>
+                <p>Servicio: {{ trabajador.servicio }}</p>
+                <p>Fecha de Nacimiento: {{ trabajador.fechaNacimiento }}</p>
+                <p>Fecha de Ingreso: {{ trabajador.fechaIngreso }}</p>
+                <form>
+                    <p class="clasificacion">
+                        <input id="radio2" type="radio" name="estrellas" value="4">
+                        <label for="radio2">★</label>
+                        <input id="radio3" type="radio" name="estrellas" value="3">
+                        <label for="radio3">★</label>
+                        <input id="radio4" type="radio" name="estrellas" value="2">
+                        <label for="radio4">★</label>
+                        <input id="radio5" type="radio" name="estrellas" value="1">
+                        <label for="radio5">★</label>
+                    </p>
+                </form>
+                <br>
+                <button class="d-flex justify-content-center align-items-center" routerLink="/cotizar/add">Solicitar
+                    servicio</button>
+
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

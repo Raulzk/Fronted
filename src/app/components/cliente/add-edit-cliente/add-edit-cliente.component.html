@@ -1,0 +1,83 @@
+<div class="header-content">
+    <div id="title">
+        <h1 style="text-align:left; margin-top:40px;margin-left: 30px;">{{accion}} Cliente</h1>
+    </div>
+</div>
+<p class="text" style="padding-left: 30px; padding-right: 30px;">
+    Estás a un paso de formar parte de nuestra comunidad
+</p>
+<div class="row">
+    <div class="col-lg-4">
+        <form [formGroup]="form" (submit)="aceptar()">
+
+            <mat-form-field class="example-container">
+                <mat-label>Código</mat-label>
+                <input matInput required placeholder="codigo" formControlName="id">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-container">
+                <mat-label>Nombre</mat-label>
+                <input matInput required placeholder="nombre" formControlName="nombre">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-container">
+                <mat-label>Telefono:</mat-label>
+                <input matInput required placeholder="telefono" formControlName="telefono">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-container">
+                <mat-label>Correo:</mat-label>
+                <input matInput required placeholder="correo" formControlName="correo">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-container">
+                <mat-label>Sexo:</mat-label>
+                <input matInput required placeholder="sexo" formControlName="sexo">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-container">
+                <mat-label>dni:</mat-label>
+                <input matInput required placeholder="dni" formControlName="dni">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-container">
+                <mat-label>Direccion:</mat-label>
+                <input matInput required placeholder="direccion" formControlName="direccion">
+            </mat-form-field>
+            <br>
+
+
+            <mat-form-field class="example-container" appearance="fill">
+                <mat-label>Fecha de Nacimiento:</mat-label>
+                <input matInput [matDatepicker]="pickerFechaNacimiento" formControlName="fechaNacimiento"
+                    [max]="maxFecha" placeholder="fechaNacimiento">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="pickerFechaNacimiento"></mat-datepicker-toggle>
+                <mat-datepicker #pickerFechaNacimiento></mat-datepicker>
+            </mat-form-field>
+            <br>
+            <br>
+            <mat-form-field class="example-container" appearance="fill">
+                <mat-label>Fecha de Registro:</mat-label>
+                <input matInput [matDatepicker]="pickerFechaRegistro" formControlName="fechaRegistro" [max]="maxFecha"
+                    placeholder="fechaRegistro">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="pickerFechaRegistro"></mat-datepicker-toggle>
+                <mat-datepicker #pickerFechaRegistro></mat-datepicker>
+            </mat-form-field>
+            <br>
+
+
+            <div style="text-align: center;">
+
+                <button mat-raised-button color="primary">Aceptar</button>
+                <button mat-raised-button color="warn" routerLink="/clientes">Cancelar</button>
+                <br>
+            </div>
+            <p>{{mensaje}}</p>
+        </form>
+    </div>
+    <div class="col-lg-4 offset-lg-2">
+        <img src="./assets/images/cliente.jpg" alt="trabajador" width="100%" height="80%">
+    </div>
+</div>

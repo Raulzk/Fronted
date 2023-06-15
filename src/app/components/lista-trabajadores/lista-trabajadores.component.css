@@ -1,0 +1,75 @@
+  .card {
+      width: 300px;
+      background-color: #1196e4;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-title {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .card-list {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    .card-list li {
+      margin-bottom: 10px;
+    }
+  button{
+      padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.25em;
+    background-color:#2063AB;
+    font-family: 'Bai Jamjuree', sans-serif;
+    color:#FFFFFF;
+    margin: 2px;
+      
+  }
+  .full-width{
+     width: 100%;
+  }
+  .clasificacion{
+    top: 175px;
+    font-size: 35px;
+    left: 340px;
+    color:#2063ab;
+  direction:initial;
+  unicode-bidi: bidi-override;
+ 
+  }
+  input[type="radio"] {
+  display: none;
+}
+
+label {
+  color: orange;
+}
+#form {
+  width: 250px;
+  margin: 0 auto;
+  height: 50px;
+}
+
+#form p {
+  text-align: center;
+}
+
+#form label {
+  font-size: 200px;
+  width: 300px;
+  margin: 200px;
+}
+input[type="radio"]:checked ~ label {
+  color: orange;
+   cursor:pointer;
+   transform: translate(0%,-3%);
+    transition-duration:500ms;
+}
+input[type="radio"] {
+  display: none;
+}

@@ -1,0 +1,118 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-12" id="title">
+            <div style="text-align: left;">
+                <h1>Registro de solicitudes</h1>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <form [formGroup]="form" (submit)="aceptar()">
+
+                <mat-form-field class="example-full-width">
+                    <mat-label>Código</mat-label>
+                    <input matInput required placeholder="Código" formControlName="id">
+                </mat-form-field>
+                <br>
+                <mat-form-field class="example-full-width">
+                    <mat-label>direccion</mat-label>
+                    <input matInput required placeholder="direccion" formControlName="direccion">
+                </mat-form-field>
+                <br>
+                <mat-form-field class="example-full-width">
+                    <mat-label>discripcion:</mat-label>
+                    <input matInput required placeholder="discripcion" formControlName="discripcion">
+                </mat-form-field>
+                <br>
+                <mat-form-field class="example-full-width">
+                    <mat-label>imagen:</mat-label>
+                    <input matInput required placeholder="imagen" formControlName="imagen">
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>fechaServicio:</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="fechaServicio" [max]="maxFecha">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Trabajador</mat-label>
+                    <mat-select formControlName="trabajador" [(value)]="idTrabajadorSeleccionado" required>
+                        <mat-option *ngFor="let a of lista" [value]="a.id">
+                            {{a.nombreCompleto}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <br>
+                <div style="text-align: center;">
+
+                    <button mat-raised-button color="primary">Cotizar</button>
+
+                    <br>
+                </div>
+                <p>{{mensaje}}</p>
+            </form>
+        </div>
+
+        <div class="col-lg-6 col-md-12" id="title">
+
+            <h3>Reseñas</h3>
+            <br>
+            <br>
+            <br>
+            <div class="card" style="width: 45rem; height: 27rem; margin:auto">
+                <div class="card-body">
+                    <div class="badges mb-2">
+                        <div>
+                            <div>
+                                <h4 id="puntaje" style="font-family:'Big Shoulders Display'; font-size: 27px">5.0</h4>
+                                <p class="clasificacion2" style="left: 55px; top: 1px">
+                                    <input id="radio1" type="radio" name="estrellas" value="5">
+                                    <label for="radio1">★</label>
+                                    <input id="radio1" type="radio" name="estrellas" value="5">
+                                    <label for="radio1">★</label>
+                                    <input id="radio1" type="radio" name="estrellas" value="5">
+                                    <label for="radio1">★</label>
+                                    <input id="radio1" type="radio" name="estrellas" value="5">
+                                    <label for="radio1">★</label>
+                                    <input id="radio1" type="radio" name="estrellas" value="5">
+                                    <label for="radio1">★</label>
+                                </p>
+                                <img src="assets/images/Karen.jpeg" class="imgRes" alt="Karina" style="left: 15px;">
+                                <h4 id="puntaje" class="kar">Karina Chavez</h4>
+                                <p id="coment">Muy buena profesional, excelentes acabados y puntual con su trabajo.</p>
+                            </div>
+                            <div>
+                                <h4 id="puntaje" class="second">4.9</h4>
+                                <p class="clasificacion2" style="left: 55px; top: 165px">
+                                    <input id="radio1" type="radio" name="estrellas" value="5">
+                                    <label for="radio1">★</label>
+                                    <input id="radio1" type="radio" name="estrellas" value="5">
+                                    <label for="radio1">★</label>
+                                    <input id="radio1" type="radio" name="estrellas" value="5">
+                                    <label for="radio1">★</label>
+                                    <input id="radio1" type="radio" name="estrellas" value="5">
+                                    <label for="radio1">★</label>
+                                    <input id="radio1" type="radio" name="estrellas" value="5">
+                                    <label for="radio1">★</label>
+                                </p>
+                                <img src="assets/images/Mauricio.jpeg" class="imgRes" alt="Karina"
+                                    style="left: 15px; top: 220px;">
+                                <h4 id="puntaje" class="kar" style="top: 215px">Mauricio Medina</h4>
+                                <p id="coment" style="top: 248px">El costo es un poco alto pero vale la pena. La primera
+                                    vez que
+                                    contrate el servicio no me dio mucha confianza pero conforme iba avanzando cambio mi
+                                    forma de
+                                    pensar. 100% recomendado.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

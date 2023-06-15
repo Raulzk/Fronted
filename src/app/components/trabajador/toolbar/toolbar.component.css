@@ -1,0 +1,10 @@
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.toolbar-logo {
+    max-height: 30%;
+    max-width: 30%;
+    background-color: white;
+}

@@ -1,0 +1,18 @@
+  .example-container{
+    width: 100%;
+    color: #2063aB;
+}
+button{
+    padding-top: 50px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 30px;
+    background-color:#2063ab ;
+    font-family: 'Bai Jamjuree', sans-serif;
+    color:#FFFFFF;
+    margin: 50px;
+}
+.mda-form-msg{
+    color:#2063aB ;
+}

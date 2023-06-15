@@ -1,0 +1,543 @@
+#title{
+    font-family: 'Big Shoulders Display', cursive; 
+    font-size: 80px;
+}
+
+/*cambios en index*/
+
+.nav-item{
+    width: 145px;
+    font-size: 23px;
+}
+
+.nav-link:hover{
+    transform: translate(0,-2px);
+    transition-delay: 500ms;
+}
+
+.logo{
+    /*500x250*/
+    width: 300px;
+}
+.imgLlave{
+    padding-top: 20px;
+    width: 90%;
+    height: auto;
+}
+#title{
+    text-align: center;
+}
+
+h1{
+    font-family: 'Big Shoulders Display', cursive; 
+    font-size: 80px;
+    color:#2063ab  
+}
+
+h2{
+    font-family: 'Big Shoulders Display', cursive; 
+    font-size: 50px;
+    color:#2063ab 
+}
+
+h3{
+    font-family: 'Bai Jamjuree', cursive; 
+    font-size: 30px;
+}
+
+.main_description{
+    padding: 150px;
+}
+
+#subtitle{
+    text-align: center;
+    font-family: 'Big Shoulders Display', cursive; 
+    font-size: 50px;
+}
+
+.link{
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.text{
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 20px;
+}
+
+.big_text{
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 800px){
+    .imgLlave{
+        max-width: 50%;
+    }
+    .logo{
+        max-width: 150px;
+        max-height: 75px;
+    }
+    .form-control{
+        max-width: 100%;
+        text-size-adjust:inherit; 
+    }
+    .form-select{
+        max-width: 100%;
+        text-size-adjust:inherit;
+    }
+    h1{
+        font-size:50px;
+    }
+    h2{
+        font-size:30px;
+    }
+    h3{
+        font-size:20px;
+    }
+    .big_text{
+        font-size:20px;
+    }
+    .text{
+        font-size: 15px;
+    }
+    .main_description{
+        padding:10px;
+    }
+
+    #searchbox{
+        max-width: 85%;
+        margin-top: 0px;
+    }
+
+    iframe{
+        width: 100%;
+        height: 350px;
+    }
+
+    .icon{
+        width:30px;
+        height:auto;
+    }
+}
+
+.btn-primary{
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 20px;
+}
+
+.form-control{
+    font-family: 'Bai Jamjuree', sans-serif;
+    margin-bottom: 10px;
+    border-radius: 15px 15px; 
+    font-size:inherit;
+
+}
+
+.form-select{
+    font-family: 'Bai Jamjuree', sans-serif;
+    margin-bottom: 10px;
+    border-radius: 15px 15px; 
+    font-size:inherit;
+}
+
+.align_right{
+    text-align: right;
+    margin-right:20px;
+}
+
+.center{
+    text-align: center;
+    align-items: center;
+    align-content: center;;
+}
+
+#mapa{
+    display:flex;
+    margin: auto;   
+    width: 1200px;
+    height: 450px;
+    top: 30px;
+}
+
+.container-fluid{
+    text-align: center;
+    align-items: center;
+}
+
+#searchbox{
+    box-sizing: border-box;
+    position:relative;
+    width: 386px;
+    height: 52px;
+    background: #FFFFFF;
+    border: 2px solid #516A7B;
+    border-radius: 20px;
+    margin:30px;
+    margin-top:70px;
+}
+
+#logo{
+    box-sizing: border-box;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+.blue_container{
+  background-color:#2063ab ;
+  color:#FFFFFF;
+  margin: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.lightblue_container{
+    background-color:#c3e4ff ;
+    margin: 0px;
+    padding:60px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+   
+}
+
+.btn{
+    border-radius: 20px 20px; 
+}
+
+#Nosotros{
+    background-color:#FFFFFF;
+    padding:40px;
+    margin:0px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.footer_container{
+    background-color:#2063ab ;
+    color:#FFFFFF;
+    padding:30px;
+
+}
+
+#contrast_link{
+    color:#FFFFFF;
+    text-decoration:none;
+}
+#BtnMostrar{
+    height: 52px;
+    left: 500px;
+    top: 30px;
+}
+#btnMapa{
+   text-align: right;
+}
+#form {
+  width: 250px;
+  margin: 0 auto;
+  height: 50px;
+}
+
+#form p {
+  text-align: center;
+}
+
+#form label {
+  font-size: 200px;
+  width: 300px;
+  margin: 200px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  color: orange;
+}
+.clasificacion {
+  direction:initial;
+  unicode-bidi: bidi-override;
+}
+
+
+input[type="radio"]:checked ~ label {
+  color: orange;
+}
+
+.card:hover{
+    transform: translate(0%,-3%);
+    transition-duration:500ms;
+    cursor:pointer;
+}
+
+#option1{
+    text-decoration: none;
+    color:dimgray;
+}
+#option2{
+    text-decoration: none;
+    color:dimgray;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin:0;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+button{
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.25em;
+    background-color:#083D5E;
+    font-family: 'Bai Jamjuree', sans-serif;
+    color:#FFFFFF;
+    margin: 2px;
+}
+
+/*Header*/
+
+#icon_menu{
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    margin: 10px;
+    border: 2px solid #272a2e ;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25% 10%;
+}
+
+.container-menu {
+    align-self: flex-end;
+    width: 0px;
+    height: 0px;
+    right: 0;
+    position: absolute;
+    overflow: hidden;
+    z-index: 10;
+    transition: all 300ms;
+    background-color: #2063AB;
+}
+
+.container-menu .usuario-menu {
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-menu .usuario-menu img {
+    width: 100px;
+}
+
+.menu {
+    background-color: #2063AB;
+    width: 100%;
+}
+
+.menu nav ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu nav ul li{
+    margin: 20px 10px;
+}
+
+.menu nav ul li a{
+    text-align: center;
+    font-size: 1.25em;
+    text-decoration: none;
+    color: #fff;
+    transition: opacity 300ms;
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.mostrar_menu{
+    width: 200px;
+    height: 90vh;
+}
+
+/*Header*/
+
+
+article {
+    max-width: 80vw;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.carta{
+    display: flex;
+    background: #FFFFFF;
+    border: 1px solid #516A7B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 10px 5px;
+    margin-bottom: 20px;
+}
+
+.carta-izq{
+    width: 50%;
+}
+.usuario{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.usuario img{
+    width: 125px;
+    margin: 0 10px 0;
+}
+.datos{
+    width: 70%;
+}
+.carta-der{
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+article a{
+    text-decoration: none;
+    color:#2063AB;
+}
+#solicitudes-aprobadas .carta-der {
+    align-self: flex-end;
+}
+
+.detalles {
+    font-style: normal;
+    font-weight: 700;
+}
+
+@media(max-width:720px){
+    article {
+        max-width: 80%;
+        margin: auto;
+    }
+
+    .usuario img {
+        width: 70px;
+    }
+}
+
+.imgLeo{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    left: 166px;
+    top: 96px;
+}
+
+.LeoProfile{
+    position: absolute;
+    font-size: 45px;
+    width: 479px;
+    height: 38px;
+    left: 200px;
+    top: 90px;
+    color:#2063ab
+}
+
+.LeoProfile2{
+    position: absolute;
+    font-size: 25px;
+    width: 83px;
+    height: 38px;
+    left: 305px;
+    top: 150px;
+}
+
+.LeoProfile3{
+    position: absolute;
+    left: 220px;
+    right: 1180px;
+    top: 190px;
+    bottom: 1175px;
+}
+
+.clasificacion2{
+    position: absolute;
+    top: 175px;
+    font-size: 35px;
+    left: 340px;
+    color:#2063ab;
+}
+
+.service{
+    position: absolute;
+    width: 314px;
+    height: 45px;
+    left: 1000px;
+    top: 132px;
+}
+
+.titel{
+    position: absolute;
+    width: 479px;
+    height: 78px;
+    left: 105px;
+    top: 257px;
+}
+
+#carta{
+    position: absolute;
+    width: 235px;
+    height: 91px;
+    left: 153px;
+    top: 310px;
+}
+
+#carta2{
+    position: absolute;
+    width: 635px;
+    height: 373px;
+    left: 633px;
+    top: 310px;
+}
+
+ul{
+    font-family: 'Big Shoulders Display', cursive; 
+    font-size: 17px;
+}
+
+.imgRes{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: 166px;
+    top: 60px;
+}
+
+.kar{
+    position: absolute;
+    font-family:'Big Shoulders Display'; 
+    font-size: 27px;
+    left: 120px;
+}
+
+#coment{
+    position: absolute;
+    font-family:'Big Shoulders Display'; 
+    font-size: 20px;
+    left: 120px;
+    top: 90px;
+}
+
+.second{
+    position: absolute;
+    font-family:'Big Shoulders Display'; 
+    font-size: 27px;
+    top: 179px;
+}
+
+#nose{
+    text-align: center;
+}

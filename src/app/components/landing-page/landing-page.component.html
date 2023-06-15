@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QueTrabajo</title>
+</head>
+
+<body>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                <div class="container-fluid">
+                    <a href="index.html">
+                        <img class="logo" src="./assets/images/quetrabajo_logo.png" alt="Logo" width="300" height="150">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#miLista"
+                        aria-controls="miLista" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="miLista">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link " href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="#Nosotros">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="#Contactanos">Contáctanos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " routerLink="/signup">Regístrate</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="login">Inicia Sesión</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-5 col-sm-12">
+                <img class="imgLlave" src="./assets/images/llave_homepage.png" alt="">
+
+            </div>
+
+            <div class="col-lg-8 col-md-7 col-sm-12">
+                <div class="main_description">
+
+                    <h1>¿SE AVERIÓ ALGO EN CASA?</h1> <br>
+                    <h2>¡Te conseguimos al especialista que <br> <br> necesitas!</h2><br>
+                    <br>
+                    <h3>Somos la red más confiable de <br> trabajadores de mantenimiento del hogar</h3><br>
+                    <a class="btn btn-primary" href="public/signin.html" type="button"
+                        style="width:300px; margin-block-end: 1%">Solicita un servicio</a>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="row-Descarga">
+            <div class="col-md-6 col-sm-12" style="margin-top: 20px; padding-left: 40px;">
+                <p class="text">Descarga la app</p>
+                <img class="img-fluid" src="./assets/images/image 5.png" alt="GooglePlay">
+                <img class="img-fluid" src="./assets/images/image 6.png" alt="AppStore">
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <p class="text" style="text-align: right; margin:20px;">
+                    ¿Tienes experiencia en servicios de mantenimiento?
+                    <br><a href="worker_register.html">¡Trabaja con nosotros!</a><br>
+                </p>
+            </div>
+        </div>
+
+        <br> <br>
+
+        <div class="blue_container">
+            <div class="row" id="row-Nosotros">
+                <div class="col-lg-5">
+                    <div class="align_left">
+                        <h1><a id="Nosotros">NOSOTROS</a></h1>
+                        <div class="big_text" style="margin: 40px;">
+                            <br>Nuestro objetivo es ayudarte a encontrar al trabajador
+                            que necesitas
+                            <br>
+                        </div>
+                        <img src="" alt="">
+                        <p class="big_text" style="margin: 40px;">
+                            <img class="icon" src="./assets/images/🦆 icon _alarm_.png" alt="">
+                            De forma Rapida
+                        </p>
+                        <p class="big_text" style="margin: 40px;">
+                            <img class="icon" src="./assets/images/🦆 icon _lock locked_.png" alt="">
+                            Con la mayor seguridad
+                        </p>
+                        <p class="big_text" style="margin: 40px;">
+                            <img class="icon" src="./assets/images/🦆 icon _location pin_.png" alt="">
+                            Donde sea que te encuentres
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-7" style="padding:40px">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="90%" height="500px" src="https://www.youtube.com/embed/d9P-qExu2Zk"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="row-Contáctanos">
+            <div class="align_left">
+                <a id="Contactanos">
+                    <h1 style="padding-left:40px; padding-top:40px">CONTÁCTANOS</h1>
+                </a>
+            </div>
+
+            <div class="col-lg-5 col-md-6 col-sm-12">
+                <p class="big_text" style="padding: 40px; text-align: justify;">
+                    Nuestros clientes son lo más importante. Escríbenos y nuestro equipo te atenderá con
+                    gusto lo antes posible.
+                </p>
+            </div>
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <div class="lightblue_container">
+                    <div class="mb-3">
+                        <input type="form-control" class="form-control" id="nombre" placeholder="Nombres y apellidos">
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-control" id="correo" placeholder="Correo electrónico">
+                    </div>
+                    <div class="mb-3">
+                        <input type="form-control" class="form-control" id="celular" placeholder="Celular"
+                            style="width: 370px;">
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" id="mensaje" rows="3"
+                            placeholder="Escriba su mensaje"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <input type="submit" text="Enviar" class="btn btn-primary btn-lg">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-black py-5" id="row-Usuarios">
+            <div class="container text-center">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <h2 class="font-weight-bold">¡Nuestros usuarios nos recomiendan!</h2>
+
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col">
+                        <img src="./assets/images/Ellipse 1.png" alt="Usuario">
+                        <p class="text" style="font-weight: bold;">Juan Carlos Wong</p>
+                        <p class="text">
+                            Aplicacion recomendada. Los trabajadores tienen
+                            experiencia y son amables.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <img src="./assets/images/Ellipse 2.png" alt="usuario">
+                        <p class="text" style="font-weight: bold;">Ana Patricia Cueva</p>
+                        <p class="text">
+                            Es una aplicacion, muy práctica recomiendo utilizarla.
+                            ¡No se van a arrepentir!
+                        </p>
+                    </div>
+                    <div class="col">
+                        <img src="./assets/images/Ellipse 3.png" alt="Usuario">
+                        <p class="text" style="font-weight: bold">Jose Manuel Delgado</p>
+                        <p class="text">
+                            Me parece una buena forma de generar ingresos.
+                            He ganado muchos clientes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="row text-white">
+                <div class="footer_container">
+                    <div class="row">
+                        <div class="col-lg-5 px-12">
+                            <h2 style="color:white">Sé parte de QueTrabajo</h2>
+                            <p class="text">
+                                <a href="signup.html" id="contrast_link">Regístrate<br></a>
+                                <a href="signin.html" id="contrast_link">Inicia Sesión<br></a>
+                                <a href="#Nosotros" id="contrast_link">Nosotros​<br></a>
+                            </p>
+                        </div>
+                        <div class="col-lg-4 px-12">
+                            <h2 style="color:white">Contáctanos</h2>
+                            <p class="text">
+                                contactanos@quetrabajo.com <br>
+                                (+51)999 888 777
+                            </p>
+
+                        </div>
+                        <div class="col-lg-3 px-12">
+                            <h2 style="color:white">Ayuda</h2>
+                            <p class="text">
+                                Preguntas frecuentes <br>
+                                Mapa de sitio <br>
+                                Búsqueda <br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div style="text-align: center;">
+            <h1>Lista de solicitudes </h1>
+        </div>
+
+        <div style="text-align: right;">
+            <button mat-raised-button color="primary" routerLink="/cotizar/add">Nuevo</button>
+        </div>
+        <mat-form-field class="full-width">
+            <input matInput (keyup)=filter($event) placeholder="Ingresar Ubicacion" />
+        </mat-form-field>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="codigo">
+                <th mat-header-cell *matHeaderCellDef> No. </th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="direccion">
+                <th mat-header-cell *matHeaderCellDef> direccion </th>
+                <td mat-cell *matCellDef="let element"> {{element.direccion}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="discripcion">
+                <th mat-header-cell *matHeaderCellDef> discripcion </th>
+                <td mat-cell *matCellDef="let element"> {{element.discripcion}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="imagen">
+                <th mat-header-cell *matHeaderCellDef> imagen </th>
+                <td mat-cell *matCellDef="let element"> {{element.imagen}} </td>
+            </ng-container>
+
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="fechaServicio">
+                <th mat-header-cell *matHeaderCellDef> fechaServicio </th>
+                <td mat-cell *matCellDef="let element"> {{element.fechaServicio|date:'dd/MM/yyyy'}} </td>
+            </ng-container>
+            <ng-container matColumnDef="trabajador">
+                <th mat-header-cell *matHeaderCellDef> Trabajador</th>
+                <td mat-cell *matCellDef="let element"> {{element.trabajador.nombreCompleto}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="acciones1">
+                <th mat-header-cell *matHeaderCellDef> Acciones </th>
+                <td mat-cell *matCellDef="let element">
+                    <button mat-raised-button color="primary" [routerLink]="['addC',element.id]">Actualizar</button>
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="acciones2">
+                <th mat-header-cell *matHeaderCellDef> Acciones </th>
+                <td mat-cell *matCellDef="let element">
+                    <button mat-raised-button color="accent" (click)="confirm(element.id)"><span
+                            class="material-icons">delete</span></button>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+    </div>
+</body>
+
+</html>
