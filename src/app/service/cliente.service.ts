@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Cliente } from '../model/cliente';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 const base_url = environment.base
 @Injectable({
@@ -14,10 +14,12 @@ export class ClienteService {
   private listaCambio = new Subject<Cliente[]>()
   constructor(private http: HttpClient) { }
   list() {
-    return this.http.get<Cliente[]>(this.url);
+    let token = sessionStorage.getItem("token");
+    return this.http.get<Cliente[]>(this.url, { headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json') });
   }
   insert(author: Cliente) {
-    return this.http.post(this.url, author);
+    let token = sessionStorage.getItem("token");
+    return this.http.post(this.url, author, { headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json') });
   }
 
   setList(listaNueva: Cliente[]) {
@@ -27,15 +29,18 @@ export class ClienteService {
     return this.listaCambio.asObservable();
   }
   listId(id: number) {
-    return this.http.get<Cliente>(`${this.url}/${id}`);
+    let token = sessionStorage.getItem("token");
+    return this.http.get<Cliente>(`${this.url, { headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json') }}/${id}`);
   }
   update(aut: Cliente) {
-    return this.http.put(this.url, aut);
+    let token = sessionStorage.getItem("token");
+    return this.http.put(this.url, aut, { headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json') });
   }
   //http- HttpClientModule: get-post-put-delete, hacer un cuadro comparativo
 
   delete(id: number) {
-    return this.http.delete(`${this.url}/${id}`)
+    let token = sessionStorage.getItem("token");
+    return this.http.delete(`${this.url, { headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json') }}/${id}`)
   }
 
   getConfirmDelete() {

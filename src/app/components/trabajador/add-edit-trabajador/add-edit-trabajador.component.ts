@@ -51,8 +51,8 @@ export class AddEditTrabajadorComponent implements OnInit {
     this.trabajador.servicio = this.form.value['servicio'];
     this.trabajador.fechaNacimiento = this.form.value['fechaNacimiento'];
     this.trabajador.fechaIngreso = this.form.value['fechaRegistro'];
-    if (this.form.value['nombreCompleto'].length > 0 &&
-      this.form.value['dni'].length > 0) {
+    if (this.form.value['nombreCompleto'] != null &&
+      this.form.value['dni'] != null) {
 
       if (this.edicion) {
         this.aS.update(this.trabajador).subscribe((data) => {

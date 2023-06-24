@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Cotizar } from '../model/cotizar';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 const base_url = environment.base
 @Injectable({
   providedIn: 'root'
@@ -13,10 +13,12 @@ export class CotizarService {
   private listaCambio = new Subject<Cotizar[]>()
   constructor(private http: HttpClient) { }
   list() {
-    return this.http.get<Cotizar[]>(this.url);
+    let token = sessionStorage.getItem("token");
+    return this.http.get<Cotizar[]>(this.url, { headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json') });
   }
   insert(cotizar: Cotizar) {
-    return this.http.post(this.url, cotizar);
+    let token = sessionStorage.getItem("token");
+    return this.http.post(this.url, cotizar, { headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json') });
   }
 
   setList(listaNueva: Cotizar[]) {
@@ -26,13 +28,16 @@ export class CotizarService {
     return this.listaCambio.asObservable();
   }
   listId(id: number) {
-    return this.http.get<Cotizar>(`${this.url}/${id}`);
+    let token = sessionStorage.getItem("token");
+    return this.http.get<Cotizar>(`${this.url, { headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json') }}/${id}`);
   }
   update(aut: Cotizar) {
-    return this.http.put(this.url, aut);
+    let token = sessionStorage.getItem("token");
+    return this.http.put(this.url, aut, { headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json') });
   }
   delete(id: number) {
-    return this.http.delete(`${this.url}/${id}`)
+    let token = sessionStorage.getItem("token");
+    return this.http.delete(`${this.url, { headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json') }}/${id}`)
   }
 
   getConfirmDelete() {

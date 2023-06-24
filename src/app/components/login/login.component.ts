@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { JwtRequest } from 'src/app/model/jwtRequest';
 import { ClienteService } from 'src/app/service/cliente.service';
+import { LoginService } from 'src/app/service/login.service';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +12,27 @@ import { ClienteService } from 'src/app/service/cliente.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  form: FormGroup;
+
+  constructor(private loginService: LoginService, private router: Router, private snackBar: MatSnackBar) { }
+  username: string = ""
+  password: string = ""
+  mensaje: string = ""
+  ngOnInit(): void {
+  }
+  login() {
+    let request = new JwtRequest();
+    request.username = this.username;
+    request.password = this.password;
+    this.loginService.login(request).subscribe((data: any) => {
+      sessionStorage.setItem("token", data.jwttoken);
+      this.router.navigate(['pages/autores']);
+    }, error => {
+      this.mensaje = "Credenciales incorrectas!!!"
+      this.snackBar.open(this.mensaje, "Aviso", { duration: 2000 });
+    });
+  }
+
+  /*form: FormGroup;
   loading = false
 
   constructor(private fb: FormBuilder, private _snackbar: MatSnackBar, private router: Router) {
@@ -57,5 +79,5 @@ export class LoginComponent implements OnInit {
       this.loading = false;
     }, 1500);
   }
-
+*/
 }
