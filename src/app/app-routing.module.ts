@@ -15,6 +15,9 @@ import { ListCotizarComponent } from './components/cotizar-trabajador/list-cotiz
 import { AddCotizarComponent } from './components/cotizar-trabajador/add-cotizar/add-cotizar.component';
 import { MsjConfirmacionComponent } from './components/msj-confirmacion/msj-confirmacion.component';
 import { SuccesfulRegistrationComponent } from './components/succesful-registration/succesful-registration.component';
+import { HomeComponent } from './components/home/home.component';
+import { ReportesComponent } from './components/reportes/reportes.component';
+import { Reporte01Component } from './components/reportes/reporte01/reporte01.component';
 
 
 
@@ -22,6 +25,7 @@ const routes: Routes = [
   {
     path: '', redirectTo: 'landing-page', pathMatch: 'full'
   },
+  { path: 'Home', component: HomeComponent },
   { path: 'landing-page', component: LandingPageComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: LoginComponent },
@@ -49,6 +53,11 @@ const routes: Routes = [
       { path: '', component: ListClienteComponent },
       { path: 'addC', component: AddEditClienteComponent },
       { path: 'editC/:id', component: AddEditClienteComponent }
+    ]
+  },
+  {
+    path: 'reportes', component: ReportesComponent, children: [
+      { path: 'soli-count-trabajador', component: Reporte01Component }
     ]
   },
   { path: '**', redirectTo: 'landing-page', pathMatch: 'full' }

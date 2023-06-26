@@ -73,8 +73,8 @@
         </td>
     </ng-container>
     <ng-container matColumnDef="acciones2">
-        <th mat-header-cell *matHeaderCellDef> Acciones </th>
-        <td mat-cell *matCellDef="let element">
+        <th mat-header-cell [hidden]="role=='USER'" *matHeaderCellDef> Acciones </th>
+        <td mat-cell [hidden]="role=='USER'" *matCellDef="let element">
             <button mat-raised-button color="accent" (click)="confirm(element.id)"><span class="material-icons"
                     style="color:#E15639;">delete</span></button>
         </td>

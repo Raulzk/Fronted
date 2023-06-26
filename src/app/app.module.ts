@@ -26,6 +26,9 @@ import { ListCotizarComponent } from './components/cotizar-trabajador/list-cotiz
 import { CotizarDialogoComponent } from './components/cotizar-trabajador/list-cotizar/cotizar-dialogo/cotizar-dialogo.component';
 import { MsjConfirmacionComponent } from './components/msj-confirmacion/msj-confirmacion.component';
 import { SuccesfulRegistrationComponent } from './components/succesful-registration/succesful-registration.component';
+import { HomeComponent } from './components/home/home.component';
+import { ReportesComponent } from './components/reportes/reportes.component';
+import { Reporte01Component } from './components/reportes/reporte01/reporte01.component';
 
 
 @NgModule({
@@ -50,6 +53,9 @@ import { SuccesfulRegistrationComponent } from './components/succesful-registrat
     CotizarDialogoComponent,
     MsjConfirmacionComponent,
     SuccesfulRegistrationComponent,
+    HomeComponent,
+    ReportesComponent,
+    Reporte01Component,
 
 
   ],

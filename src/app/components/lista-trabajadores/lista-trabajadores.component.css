@@ -73,3 +73,9 @@ input[type="radio"]:checked ~ label {
 input[type="radio"] {
   display: none;
 }
+h1{
+    font-family: 'Big Shoulders Display', cursive; 
+    font-size: 50px;
+    color:rgb(3, 90, 221); 
+    text-align: center;
+}

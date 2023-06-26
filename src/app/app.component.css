@@ -1,0 +1,9 @@
+button{
+  background-color: #007bff;
+  color: white;
+  margin-right: 10px;
+}
+
+.mat-toolbar {
+  background-color: primary; /* Reemplaza #f1f1f1 con el color de fondo deseado */
+}

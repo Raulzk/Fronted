@@ -30,7 +30,9 @@ export class ClienteService {
   }
   listId(id: number) {
     let token = sessionStorage.getItem("token");
-    return this.http.get<Cliente>(`${this.url, { headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json') }}/${id}`);
+    return this.http.get<Cliente>(`${this.url}/${id}`, {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    });
   }
   update(aut: Cliente) {
     let token = sessionStorage.getItem("token");
@@ -40,7 +42,9 @@ export class ClienteService {
 
   delete(id: number) {
     let token = sessionStorage.getItem("token");
-    return this.http.delete(`${this.url, { headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json') }}/${id}`)
+    return this.http.delete(`${this.url}/${id}`, {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    })
   }
 
   getConfirmDelete() {

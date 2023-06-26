@@ -1,10 +1,12 @@
-.body
+.bod
 {
-  display:flex;
-  justify-content: center;
-  height: 100vh;
-  align-items: center;
-background-color:white;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+    background-image: url('./../../../../src/assets/images/fondito.avif');
+    background-size: cover;
+    height: 1000px;
+    position: relative;
 }
 .login
 {
@@ -16,9 +18,13 @@ background-color:white;
 {
   width: 80%;
 }
-.button{
-  height: 50px;
-  border-radius: 50px;
+button{
+  height: 40px;
+  width: 150px;
+  border-radius: 5px;
+  background-color: #2063ab;
+  color: white;
+ 
 }
 
 .spinner{

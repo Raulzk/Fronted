@@ -24,6 +24,7 @@ export class ListClienteComponent implements OnInit {
   }
   ngOnInit(): void {
     this.role = this.ls.showRole();
+    console.log(this.role);
     this.aS.list().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator = this.paginator;

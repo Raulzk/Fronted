@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Cotizar } from '../model/cotizar';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { cotizarTrabajadorDTO } from '../model/CotizarTrabajadorDTO';
 const base_url = environment.base
 @Injectable({
   providedIn: 'root'
@@ -29,7 +30,9 @@ export class CotizarService {
   }
   listId(id: number) {
     let token = sessionStorage.getItem("token");
-    return this.http.get<Cotizar>(`${this.url, { headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json') }}/${id}`);
+    return this.http.get<Cotizar>(`${this.url}/${id}`, {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    });
   }
   update(aut: Cotizar) {
     let token = sessionStorage.getItem("token");
@@ -37,7 +40,9 @@ export class CotizarService {
   }
   delete(id: number) {
     let token = sessionStorage.getItem("token");
-    return this.http.delete(`${this.url, { headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json') }}/${id}`)
+    return this.http.delete(`${this.url}/${id}`, {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    })
   }
 
   getConfirmDelete() {
@@ -45,5 +50,9 @@ export class CotizarService {
   }
   setConfirmDelete(estado: Boolean) {
     this.confirmarEliminacion.next(estado);
+  }
+  getBookCountByAuthor(): Observable<cotizarTrabajadorDTO[]> {
+    let token = sessionStorage.getItem("token");
+    return this.http.get<cotizarTrabajadorDTO[]>(`${this.url}/soli-count`, { headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json') });
   }
 }
